@@ -1,5 +1,5 @@
 import xlsxwriter
-import os
+
 
 
 # ------------------------------
@@ -7,19 +7,7 @@ import os
 #  Autor : Andrei Gustavo
 #  Data : (14/01/2020)
 # ------------------------------
-
-
-def check_if_the_path_of_the_file() -> str:
-    route = 'C:/Users/andre/PycharmProjects/Excel/archives_excel/'
-    file = route + 'excel.xlsx'
-
-    if not os.path.exists(route):
-        os.makedirs(route)
-
-    if not os.path.exists(file):
-        raise Exception('NonexistentFile!')
-
-    return file
+from excel_path.check_file_excel import check_if_the_path_of_the_file
 
 
 def excel_writing_function(list_of_dict: list):
